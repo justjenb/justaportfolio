@@ -1,4 +1,4 @@
-export default function RepoStats({ stars, forks, issues }) {
+export default function RepoStats({ stars, forks, watchers }) {
   return (
     <div className="text-start m-3">
       <ul className="list-group">
@@ -7,7 +7,7 @@ export default function RepoStats({ stars, forks, issues }) {
         </h6>
         <li className="list-group-item">Stars: {stars}</li>
         <li className="list-group-item">Forks: {forks}</li>
-        <li className="list-group-item">Issues: {issues}</li>
+        <li className="list-group-item">Watchers: {watchers}</li>
       </ul>
     </div>
   );

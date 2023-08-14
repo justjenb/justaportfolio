@@ -17,12 +17,15 @@ export default function HomePage() {
       console.log('Repo response:', repoResponse);
   
       setUser(userResponse.data);
-      setRepos(repoResponse.data);
+  
+      // Sort repos by id in ascending order
+      const sortedRepos = repoResponse.data.sort((a, b) => a.id - b.id);
+      setRepos(sortedRepos);
     } catch (error) {
       console.error('An error occurred while fetching data:', error);
     }
   };
-  
+    
   useEffect(() => {
     fetchData();
   }, []);
